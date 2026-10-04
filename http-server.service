@@ -1,0 +1,15 @@
+[Unit]
+Description=Http server by Python
+Documentation=https://gist.github.com/anestesia001/f50a3430d3152830bf30bab3138c6923
+After=network-online.target
+
+[Service]
+Type=simple
+User=web-user
+Group=web-user
+ExecStart=/usr/bin/python3 /data/TMS/lesson13/http-server.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+
